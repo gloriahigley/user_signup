@@ -18,7 +18,7 @@ def validate_form():
     verify_error = ""
     email_error = ""
 
-    if username == "" or ' ' in username: #if username == "" or ' ' in username
+    if username == "" or ' ' in username: 
         username_error = "Please enter a valid username with no spaces"
     else:
         if len(username) < 3 or len(username) > 20:
@@ -38,8 +38,6 @@ def validate_form():
     else:
         if (' ' in email) or (email.count("@") < 1 or email.count("@") > 1) or (email.count(".") < 1 or email.count(".") > 1):
             email_error = "Please enter a valid email with one '@', ',' and no spaces"
-        #elif "@" or "." not in email:
-            #email_error = "Please enter a valid email with an 2 '@' and/or '.'"
         if len(email) < 3 or len(email) > 20:
                 email_error = "Please enter an email with > 3 characters and < than 20 characters" 
 
